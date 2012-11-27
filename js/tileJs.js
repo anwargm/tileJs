@@ -45,7 +45,7 @@ function Tile( element ){
 		tile.style.webkitFontSmoothing = "antialiased";
 
 		// Listen to mouse events for the tile.
-		tile.addEventListener('mousedown', MouseDown, false);
+		tile.addEventListener('mousemove', MouseDown, false);
 		
 	}
 
@@ -113,7 +113,7 @@ function Tile( element ){
 		tile.style.oTransform = translateString;
 		tile.style.transform = translateString;
 
-		document.addEventListener('mouseup',   MouseUp,   false);    
+		document.addEventListener('mouseout',   MouseUp,   false);    
 
 	};
 	
@@ -144,7 +144,7 @@ function Tile( element ){
 		tile.style.oTransform = idleCss;
 		tile.style.transform = idleCss;
 
-		document.removeEventListener('mouseup',   MouseUp,   false);
+		document.removeEventListener('mouseout',   MouseUp,   false);
 	};
 
 	// Element position finding for non webkit browsers.
